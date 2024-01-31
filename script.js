@@ -1,45 +1,45 @@
-function pokazWiadomosc(odpowiedz) {
-  if (odpowiedz === "Nie") {
-    const przyciskNie = document.getElementById("no-button");
-    const kontener = document.querySelector(".container");
-    const maksSzerokosc = window.innerWidth - przyciskNie.offsetWidth;
-    const maksWysokosc = window.innerHeight - przyciskNie.offsetHeight;
+function showMessage(response) {
+  if (response === "No") {
+    const noButton = document.getElementById("no-button");
+    const container = document.querySelector(".container");
+    const maxWidth = window.innerWidth - noButton.offsetWidth;
+    const maxHeight = window.innerHeight - noButton.offsetHeight;
 
-    // Ustawienie pozycji przycisku na absolutną
-    przyciskNie.style.position = "absolute";
+    // Set button position to absolute
+    noButton.style.position = "absolute";
 
-    // Zmiana źródła obrazu na "gun.gif"
+    // Change image source to "gun.gif"
     document.getElementsByClassName("image")[0].src = "images/gun.gif";
 
-    // Generowanie losowych współrzędnych w obrębie widocznego kontenera
-    const losowaX = Math.max(0, Math.floor(Math.random() * maksSzerokosc));
-    const losowaY = Math.max(0, Math.floor(Math.random() * maksWysokosc));
+    // Generate random coordinates within the visible container
+    const randomX = Math.max(0, Math.floor(Math.random() * maxWidth));
+    const randomY = Math.max(0, Math.floor(Math.random() * maxHeight));
 
-    // Zastosowanie nowych współrzędnych do przycisku
-    przyciskNie.style.left = losowaX + "px";
-    przyciskNie.style.top = losowaY + "px";
+    // Apply new coordinates to the button
+    noButton.style.left = randomX + "px";
+    noButton.style.top = randomY + "px";
 
-    // Zaktualizuj treść tekstu i ukryj wiadomość z imieniem
+    // Update text content and hide name message
     document.getElementById("question").textContent =
-      "Przycisk 'Nie' jest tylko dla efektu wizualnego";
+      "The no button is just for visuals";
     document.getElementById("name").style.display = "none";
 
-    // Opcjonalnie: Możesz także dodać timeout do zresetowania pozycji po kilku sekundach
+    // Optional: You can also add a timeout to reset the position after a few seconds
   }
 
-  if (odpowiedz === "Tak") {
-    // Usunięcie wiadomości z imieniem i przycisku "Nie"
+  if (response === "Yes") {
+    // Remove name message and no button
     document.getElementById("name").remove();
     document.getElementById("no-button").remove();
 
-    // Zaktualizuj treść tekstu, pokaż wiadomość i zmień źródło obrazu na "dance.gif"
-    const wiadomoscTak = document.getElementById("question");
-    wiadomoscTak.textContent = "LETS GOOO zobaczymy się 14 lutego 😘😘";
-    wiadomoscTak.style.display = "block";
-    wiadomoscTak.style.fontStyle = "normal";
+    // Update text content, show message, and change image source to "dance.gif"
+    const yesMessage = document.getElementById("question");
+    yesMessage.textContent = "LESGOOO see you on the 14th babygirl😘😘";
+    yesMessage.style.display = "block";
+    yesMessage.style.fontStyle = "normal";
     document.getElementsByClassName("image")[0].src = "images/dance.gif";
 
-    // Usunięcie przycisku "Tak"
+    // Remove yes button
     document.getElementById("yesButton").remove();
   }
 }
