@@ -67,7 +67,7 @@ body
     flex-direction: row;
 }
 
-#nie-button{
+#no-button{
     
 }
 
@@ -80,7 +80,7 @@ body
     animation: moveNoMessage 0.5s linear;
 }
 
-@keyframes movenieMessage {
+@keyframes moveNoMessage {
     0% { transform: translate(0, 0); }
     25% { transform: translate(30px, 30px); }
     50% { transform: translate(-20px, -20px); }
