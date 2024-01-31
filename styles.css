@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lobster', kroj ręczny; /* Zmień na romantyczną czcionkę kursywą */
+    font-family: 'Lobster', cursive; /* Change to a romantic cursive font */
     background-color: #ffdde1;
     display: flex;
     align-items: center;
@@ -10,18 +10,20 @@ body {
     font-size: 35px;
     color: rgb(255, 0, 174);
 }
-
-.hh {
+.hh{
     -webkit-text-stroke: 2px #71004f;
-    font-weight: 900;
+    font-weight:900;
+
 }
-
-.pp {
+.pp{
     -webkit-text-stroke: 2px #71004f;
+
     font-size: 50px;
     font-style: oblique;
     font-weight: 800;
 }
+
+body
 
 .container {
     width: 100%;
@@ -35,8 +37,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.image {
+.image{
     height: 280px;
+    
 }
 
 .buttons button {
@@ -49,20 +52,23 @@ body {
     font-size: 26px;
     cursor: pointer;
     position: relative;
-    font-family: 'Lobster', kroj ręczny; /* Zmień na romantyczną czcionkę kursywą */
+    font-family: 'Lobster', cursive; /* Change to a romantic cursive font */
+
 }
 
 .buttons button:hover {
     background-color: #7c1f37;
+
 }
 
-.buttons {
+.buttons{
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
-#no-button {
+#no-button{
+    
 }
 
 .hidden-message {
@@ -71,13 +77,13 @@ body {
 }
 
 .move {
-    animacja: przesunWiadomosc 0.5s liniowo;
+    animation: moveNoMessage 0.5s linear;
 }
 
-@keyframes przesunWiadomosc {
-    0% { transform: przetłumacz(0, 0); }
-    25% { transform: przetłumacz(30px, 30px); }
-    50% { transform: przetłumacz(-20px, -20px); }
-    75% { transform: przetłumacz(10px, 10px); }
-    100% { transform: przetłumacz(0, 0); }
+@keyframes moveNoMessage {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(30px, 30px); }
+    50% { transform: translate(-20px, -20px); }
+    75% { transform: translate(10px, 10px); }
+    100% { transform: translate(0, 0); }
 }
