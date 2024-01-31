@@ -2,11 +2,11 @@ function showMessage(response) {
   if (response === "NIE") {
     const nieButton = document.getElementById("nie-button");
     const container = document.querySelector(".container");
-    const maxWidth = window.innerWidth - nieButton.offsetWidth;
-    const maxHeight = window.innerHeight - nieButton.offsetHeight;
+    const maxWidth = window.innerWidth - noButton.offsetWidth;
+    const maxHeight = window.innerHeight - noButton.offsetHeight;
 
     // Set button position to absolute
-    nieButton.style.position = "absolute";
+    noButton.style.position = "absolute";
 
     // Change image source to "gun.gif"
     document.getElementsByClassName("image")[0].src = "images/gun.gif";
@@ -16,8 +16,8 @@ function showMessage(response) {
     const randomY = Math.max(0, Math.floor(Math.random() * maxHeight));
 
     // Apply new coordinates to the button
-    nieButton.style.left = randomX + "px";
-    nieButton.style.top = randomY + "px";
+    noButton.style.left = randomX + "px";
+    noButton.style.top = randomY + "px";
 
     // Update text content and hide name message
     document.getElementById("question").textContent =
